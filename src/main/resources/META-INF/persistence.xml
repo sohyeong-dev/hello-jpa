@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.2">
+
+    <persistence-unit name="hellojpa">
+
+        <class>hello.hellojpa.entity.Member</class>
+        <class>hello.hellojpa.entity.Role</class>
+
+        <properties>
+
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.user" value="shlee"/>
+            <property name="javax.persistence.jdbc.password" value="201611220"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/hellojpa"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" />
+
+            <!-- 옵션 -->
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.format_sql" value="true" />
+            <property name="hibernate.use_sql_comments" value="true" />
+            <property name="hibernate.id.new_generator_mappings" value="true" />
+
+            <property name="hibernate.hbm2ddl.auto" value="create" />
+
+        </properties>
+    </persistence-unit>
+</persistence>
