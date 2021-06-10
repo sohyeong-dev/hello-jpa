@@ -1,7 +1,10 @@
 package hello.hellojpa.entity;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
+// 회원 엔티티
 @Entity
 @Table(name = "MEMBER")
 public class Member {
@@ -12,6 +15,42 @@ public class Member {
     private String name;    // 이름
 
     private String phone;   // 전화번호
+
+    // 주소 정보
+    private String city;
+    private String street;
+    private String zipcode;
+
+    @OneToMany(mappedBy = "member")
+    private List<Order> orders = new ArrayList<>();
+
+    public List<Order> getOrders() {
+        return orders;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getStreet() {
+        return street;
+    }
+
+    public void setStreet(String street) {
+        this.street = street;
+    }
+
+    public String getZipcode() {
+        return zipcode;
+    }
+
+    public void setZipcode(String zipcode) {
+        this.zipcode = zipcode;
+    }
 
     public String getPhone() {
         return phone;
