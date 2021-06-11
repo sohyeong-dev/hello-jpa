@@ -1,4 +1,6 @@
-package hello.hellojpa.entity;
+package hello.hellojpa.entity.item;
+
+import hello.hellojpa.entity.Category;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -6,7 +8,8 @@ import java.util.List;
 
 // 상품
 @Entity
-public class Item {
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)   // 단일 테이블 전략
+public abstract class Item {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ITEM_ID")

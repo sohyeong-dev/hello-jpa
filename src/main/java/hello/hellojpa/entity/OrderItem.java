@@ -1,5 +1,7 @@
 package hello.hellojpa.entity;
 
+import hello.hellojpa.entity.item.Item;
+
 import javax.persistence.*;
 
 // 주문상품
@@ -12,7 +14,7 @@ public class OrderItem {
     private Long id;
 
     // 주문한 상품
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ITEM_ID")
     private Item item;
 
@@ -57,7 +59,7 @@ public class OrderItem {
     }
 
     // 주문
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ORDER_ID")
     private Order order;
 

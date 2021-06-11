@@ -7,9 +7,12 @@
         <class>hello.hellojpa.entity.Role</class>
         <class>hello.hellojpa.entity.Order</class>
         <class>hello.hellojpa.entity.OrderItem</class>
-        <class>hello.hellojpa.entity.Item</class>
+        <class>hello.hellojpa.entity.item.Item</class>
         <class>hello.hellojpa.entity.Delivery</class>
         <class>hello.hellojpa.entity.Category</class>
+        <class>hello.hellojpa.entity.item.Album</class>
+        <class>hello.hellojpa.entity.item.Book</class>
+        <class>hello.hellojpa.entity.item.Movie</class>
 
         <properties>
 

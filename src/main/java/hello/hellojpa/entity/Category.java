@@ -1,5 +1,7 @@
 package hello.hellojpa.entity;
 
+import hello.hellojpa.entity.item.Item;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
